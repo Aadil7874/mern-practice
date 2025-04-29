@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0969da;
+  --secondary: #f3f4f6;
+  --accent: #2da44e;
+  --background: #ffffff;
+  --text: #24292f;
+  --error: #dc2626;
+}
+
+[data-theme="dark"] {
+  --primary: #58a6ff;
+  --secondary: #1f2937;
+  --accent: #3fb950;
+  --background: #0d1117;
+  --text: #e5e7eb;
+}
+
+/* Reset & Base Styles */
+html,
+body {
+  margin: 0;
+  padding: 20px 40px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Container Fixes */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow-x: hidden;
+}
+
+/* Navbar Fix */
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  position: relative;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Grid Items Fix */
+.gridItems {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Note Component Fix */
+.note {
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--secondary);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  height: 220px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Form Container Fix */
+.form {
+  width: min(90%, 400px);
+  max-width: 100%;
+  padding: 2rem;
+  margin: 1rem auto;
+}
+
+/* Footer Fix */
+.footer {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.inputBox {
+  width: 100%;
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.inputBox input {
+  flex: 1;
+  padding: 7px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.btnBig {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--accent);
+  color: var(--primary);
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+.btnBig:hover {
+  transform: scale(102%);
+}
+
+.btnNormal {
+  min-width: 130px;
+  padding: 10px;
+  background-color: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+.gridItems.gridOne {
+  grid-template-columns: auto;
+}
+
+.gridItems .note {
+  width: 23vw;
+  background-color: var(--secondary);
+  padding: 10px;
+  cursor: pointer;
+  height: 220px;
+}
+
+.sp-text {
+  color: var(--accent);
+}
+
+.jodit-wysiwyg {
+  min-height: 200px !important;
+}
+
+.checkBox.active {
+  background-color: #578DF5;
+}
+
+/* profile--page--sticky--css */
+/* Sticky Header Styles */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: var(--background);
+  padding: 1rem 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  margin: 0 -1rem;
+}
+
+/* Container Styles */
+.notes-container {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0 1rem;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+/* Make sure the grid items don't overflow */
+.gridItems {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Ensure footer stays at bottom */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+  .container,
+  .navbar,
+  .gridItems,
+  .form,
+  .footer {
+    padding: 0 0.5rem;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
